@@ -7,10 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css">
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 	<!-- <meta name="robots" content="noindex, nofollow" /> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
 </head>
 <body>
 	<div class="wrapper">
@@ -63,7 +63,7 @@
 							<p class="offer__text text">
 								Бережем ваше время, средства и природу
 							</p>
-							<a href="#" class="offer__btn btn">Вызвать специалиста</a>
+							<a href="#callback" class="offer__btn btn pl" data-vid="">Вызвать специалиста</a>
 						</div>
 						<a href="#mission" class="main-screen__arrow">
 							<img src="img/arrow_down.svg" alt="">
@@ -168,7 +168,7 @@
 						<p class="call__text text">
 							Бесплатный вызов специалиста эколога для подробной консультации по вашему предприятию
 						</p>
-						<a href="" class="call__btn btn">Вызвать специалиста</a>
+						<a href="#callback" class="call__btn btn pl">Вызвать специалиста</a>
 						<h3 class="call__subtitle">Или звоните нам для бесплатной консультации</h3>
 						<a href="tel:88002007827" class="call_phone">8 800 200 78 27</a>
 					</div>
@@ -253,7 +253,7 @@
 						<p class="call__text text">
 							Бесплатный вызов специалиста эколога для подробной консультации по вашему предприятию
 						</p>
-						<a href="" class="call__btn btn">Вызвать специалиста</a>
+						<a href="#callback" class="call__btn btn pl">Вызвать специалиста</a>
 						<h3 class="call__subtitle">Или звоните нам для бесплатной консультации</h3>
 						<a href="tel:88002007827" class="call_phone">8 800 200 78 27</a>
 					</div>
@@ -375,28 +375,38 @@
 			</div>
 		</div>
 	</div>
-</footer>			
-		</main>
-	</div>
-<div class="popup">
+</footer>
+<div class="popup popup-callback">
 	<div class="popup-table table">
 		<div class="cell">
 			<div class="popup-content">
-				<div class="popup-close"></div>
-				<div class="popup__title"></div>
+				<div class="popup-close">X</div>
+				<div class="popup__title title">Календарь вызова эколога</div>
 				<div class="popup__txt"></div>
-				<form action="#" class="popup-form form">
+				<form action="#mail.php" class="popup-form form">
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input" />
+						<input autocomplete="off" type="text" name="name" data-value="Ваше имя" class="contacts__input input req"  />
 					</div>
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req email" />
+						<input autocomplete="off" type="text" name="phone" data-value="Номер телефона" class="contacts__input input req"  />
 					</div>
 					<div class="form-input">
-						<input autocomplete="off" type="text" name="form[]" data-value="" class="input req" />
+						<input autocomplete="off" type="date" name="date" data-value="Введите дату" class="contacts__input input"  />
+					</div>
+					<div class="form-block__item">
+						<select name="time" id="" class=" contacts__input select">
+							<option value="0" selected>Время</option>
+							<option value="1">9:00-10:00</option>
+							  <option value="2" >10:00-11:00</option>
+							  <option value="3">11:00-12:00</option>
+							  <option value="4">12:00-13:00</option>
+							  <option value="5">14:00-15:00</option>
+							  <option value="6">15:00-16:00</option>
+							  <option value="7">16:00-17:00</option> 
+						</select>
 					</div>
 					<div class="form-button">
-						<button type="submit" class="form__btn btn fw"></button>
+						<button type="submit" class="form__btn btn btn_p fw">Отправить</button>
 					</div>
 				</form>
 			</div>
@@ -410,7 +420,10 @@
 			<div class="popup-video__value"></div>
 		</div>
 	</div>
-</div><script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</div>		</main>
+	</div>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.min.js"></script> -->
 <script src="js/vendors.js"></script>
 <script src="js/main.js"></script>
